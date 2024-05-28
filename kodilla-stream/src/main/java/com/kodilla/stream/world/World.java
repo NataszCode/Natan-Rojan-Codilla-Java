@@ -3,6 +3,7 @@ package com.kodilla.stream.world;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 public class World {
@@ -18,5 +19,12 @@ public class World {
                 .map(Country::getPeopleQuantity)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
+    public String getCountriesCode() {
+        return continents.stream()
+                .flatMap(continent -> continent.getCountries().stream())
+                .map(Country::toString)
+                .reduce("", (a,b)-> a + "_" + b.toUpperCase(Locale.ROOT));
+    }
+
 }
 

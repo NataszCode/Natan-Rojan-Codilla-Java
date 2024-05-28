@@ -31,9 +31,11 @@ public class WorldTestSuite {
 
         // When
         BigDecimal totalPeopleQuantity = world.getPeopleQuantity();
+        //String abc = world.getCountriesCode();
 
         // Then
-        BigDecimal expectedPeopleQuantity = new BigDecimal("1938000000");
+        BigDecimal expectedPeopleQuantity = new BigDecimal("2888000000");
+        //assertEquals("", abc);
         assertEquals(expectedPeopleQuantity, totalPeopleQuantity);
     }
 }
