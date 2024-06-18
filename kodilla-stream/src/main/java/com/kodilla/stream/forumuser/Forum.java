@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Forum {
 
-    private List<ForumUser> users;
+    private final List<ForumUser> users;
 
     // Konstruktor
     public Forum() {

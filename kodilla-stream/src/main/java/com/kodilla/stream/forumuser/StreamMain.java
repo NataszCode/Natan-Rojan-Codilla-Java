@@ -9,11 +9,11 @@ import java.util.stream.Collectors;
 public class StreamMain {
     public static void main(String[] args) {
         // Tworzenie obiektów ForumUser
-        ForumUser user1 = new ForumUser(1, "jan_kowal", 'M', LocalDate.of(1996, 5, 20), 10);
-        ForumUser user2 = new ForumUser(2, "kasia_kat", 'F', LocalDate.of(2000, 8, 15), 5);
-        ForumUser user3 = new ForumUser(3, "michal_dzwon", 'M', LocalDate.of(1982, 3, 10), 0);
+        ForumUser user1 = new ForumUser(1, "jan_kowal", 'M', LocalDate.now().minusYears(20).plusDays(1), 10);
+        ForumUser user2 = new ForumUser(2, "kasia_kat", 'F', LocalDate.of(2000, 8, 15), 0);
+        ForumUser user3 = new ForumUser(3, "michal_dzwon", 'M', LocalDate.now().minusYears(20), 5);
         ForumUser user4 = new ForumUser(4, "ola_pozew", 'F', LocalDate.of(1998, 1, 25), 20);
-        ForumUser user5 = new ForumUser(5, "kacper_konewka", 'M', LocalDate.of(2008, 6, 30), 3);
+        ForumUser user5 = new ForumUser(5, "kacper_konewka", 'M', LocalDate.of(2004, 4, 30), 3);
 
         // Obiekty i dodawanie
         Forum forum = new Forum();
