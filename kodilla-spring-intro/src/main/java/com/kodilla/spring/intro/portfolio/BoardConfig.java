@@ -1,4 +1,5 @@
-package com.kodilla.spring.portfolio;
+package com.kodilla.spring.intro.portfolio;
+
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.kodilla.spring.portfolio;
+package com.kodilla.spring.intro.portfolio;
 
 public class Board {
 
