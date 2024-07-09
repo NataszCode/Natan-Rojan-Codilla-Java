@@ -12,7 +12,7 @@ public class LibraryTestSuite {
 
     @Test
     void testGetBooks() {
-        // Given
+
         Library library = new Library("My Library");
         Book book1 = new Book("Title1", "Author1", LocalDate.of(2020, 1, 1));
         Book book2 = new Book("Title2", "Author2", LocalDate.of(2021, 2, 2));
