@@ -1,0 +1,34 @@
+-- List of tasks with task list names
+SELECT
+    I.ID AS Task_ID,
+    I.SUMMARY AS Task_Summary,
+    IL.NAME AS List_Name
+FROM
+    ISSUES I
+        JOIN
+    ISSUESLISTS IL ON I.ISSUESLIST_ID = IL.ID;
+
+-- List of tasks with assigned users
+SELECT
+    I.ID AS Task_ID,
+    I.SUMMARY AS Task_Summary,
+    U.FIRSTNAME AS Assigned_User_First_Name,
+    U.LASTNAME AS Assigned_User_Last_Name
+FROM
+    ISSUES I
+        JOIN
+    USERS U ON I.USER_ID_ASSIGNEDTO = U.ID;
+
+-- User names with the count of tasks assigned to them
+SELECT
+    U.FIRSTNAME AS User_First_Name,
+    U.LASTNAME AS User_Last_Name,
+    COUNT(I.ID) AS Task_Count
+FROM
+    USERS U
+        LEFT JOIN
+    ISSUES I ON U.ID = I.USER_ID_ASSIGNEDTO
+GROUP BY
+    U.ID,
+    U.FIRSTNAME,
+    U.LASTNAME;
